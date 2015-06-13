@@ -3,7 +3,7 @@ import time
 import os
 
 HOST = ''
-PORT = 50007
+PORT = 51517
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((HOST, PORT))
 s.listen(1)
