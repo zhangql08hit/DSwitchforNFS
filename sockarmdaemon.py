@@ -3,7 +3,10 @@ import time
 import os
 
 HOST = ''
-PORT = 51519
+PORT = 51518
+PCHOST = '162.105.146.169'
+PCPORT = 51519
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((HOST, PORT))
 s.listen(1)
