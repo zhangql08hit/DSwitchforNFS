@@ -19,7 +19,7 @@ while True:
 		pcs.sendall('start')
 		os.system('echo 0 > /sys/class/gpio/gpio1_pc21/value')
 		res = pcs.recv(1024)
-		if res == 'done'
+		if res == 'done':
 			print 'PC mounted disk and restarted service'
 			conn.sendall('pcdone')
 		else:
