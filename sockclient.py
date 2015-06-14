@@ -34,7 +34,7 @@ if __name__ == '__main__':
 			else:
 				print 'Server fails to switch disk'
 			p.join()
-		elif data = 'topc':
+		elif data == 'topc':
 			print 'Server switches to PC'
 			os.system('echo 5 > /proc/sys/fs/nfs/nfs_zql_control')
 			p = Process(target=try_ls_comm)
