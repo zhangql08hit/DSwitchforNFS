@@ -9,7 +9,7 @@ ARMHOST = '162.105.146.168'
 ARMPORT = 51518
 
 if __name__ == '__main__':
-	if sys.argc != 2:
+	if len(sys.argv) != 2:
 		print 'Executing command error!'
 	
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
