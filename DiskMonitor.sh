@@ -1,7 +1,9 @@
 #!/bin/bash
 
-a=`fdisk -l | grep '^Disk /dev/sd' | awk '{print $2}' | wc -l`
-astr=`fdisk -l | grep '^Disk /dev/sd' | awk '{print $2}'`
+#a=`fdisk -l | grep '^Disk /dev/sd' | awk '{print $2}' | wc -l`
+#astr=`fdisk -l | grep '^Disk /dev/sd' | awk '{print $2}'`
+astr=`cat pastr.txt`
+a=`cat pastr.txt | wc -l`
 b=`fdisk -l | grep '^Disk /dev/sd' | awk '{print $2}' | wc -l`
 
 echo 'Start Monitoring Disks...'
@@ -31,5 +33,5 @@ else
 	len=`expr length $disk`
 	llen=`expr $len - 1`
 	part=`echo $disk | cut -b 1-$llen`
-	mount -t ext4 "${part}1" /mnt/disk1
+	mount -t ext4 "${part}1" /home/disk1
 fi
