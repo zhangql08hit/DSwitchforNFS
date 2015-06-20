@@ -55,7 +55,8 @@ if __name__ == '__main__':
 		if data == 'block':
 			print 'Client blocked IO'
 			#checkonflyio()
-			os.system('./checknfsops.sh')
+			#os.system('./checknfsops.sh')
+			os.system('sleep 0.5')
 			os.system('sync')
 
 			#os.system('echo 0 > /sys/class/gpio/gpio1_pc21/value')
